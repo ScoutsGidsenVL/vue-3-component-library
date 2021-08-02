@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>given name</p>
+    <p>given name::::::</p>
     <h1>{{ name }}</h1>
   </div>
 </template>
