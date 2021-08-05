@@ -3,6 +3,7 @@
     <strong v-if="!hideInput && label">
       <p>
         {{ label }}
+        <required :rules="rules" />
       </p>
     </strong>
     <div v-if="extraInfo" style="font-size: 13px">
@@ -63,13 +64,13 @@
 import { ErrorMessage, useField } from 'vee-validate'
 import { InputTypes } from '../../enums/inputTypes'
 import { defineComponent, watch } from 'vue'
-// import Required from '@/components/semantic/Required.vue'
+import Required from '../required/Required.vue'
 
 export default defineComponent({
   name: 'CustomInput',
   components: {
-    ErrorMessage
-    // Required
+    ErrorMessage,
+    Required
   },
   props: {
     name: {
