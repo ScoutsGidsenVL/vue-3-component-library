@@ -5,7 +5,9 @@ WORKDIR /app
 ENTRYPOINT ["/entrypoint.sh"]
 
 COPY docker/entrypoint*.sh /
-COPY package.json package-lock.json ./
+COPY package*.json ./
 
-COPY ./ ./
+RUN npm install --global rollup && npm  install
+
+COPY . .
 
