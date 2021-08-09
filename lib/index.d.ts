@@ -5,4 +5,5 @@ import CustomButton from './components/customButton/CustomButton.vue';
 import BaseSideBar from './components/baseSideBar/BaseSideBar.vue';
 import { sideBarState } from './types/sideBarState';
 import { option } from './interfaces/option';
-export { CustomInput, BasePage, PageTitle, CustomButton, BaseSideBar, sideBarState, option };
+import { InputTypes } from './enums/inputTypes';
+export { CustomInput, BasePage, PageTitle, CustomButton, BaseSideBar, sideBarState, option, InputTypes };

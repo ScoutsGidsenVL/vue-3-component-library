@@ -65,6 +65,8 @@ import { ErrorMessage, useField } from 'vee-validate'
 import { InputTypes } from '../../enums/inputTypes'
 import { defineComponent, watch } from 'vue'
 import Required from '../required/Required.vue'
+import { required } from '@vee-validate/rules'
+import { defineRule } from 'vee-validate'
 
 export default defineComponent({
   name: 'CustomInput',
@@ -148,6 +150,8 @@ export default defineComponent({
     }
   },
   setup(props) {
+    defineRule('required', required)
+
     const { value: inputValue } = useField(props.name, props.rules, {
       initialValue: props.value
     })

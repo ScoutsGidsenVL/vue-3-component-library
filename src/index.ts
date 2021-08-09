@@ -11,4 +11,7 @@ import { sideBarState } from './types/sideBarState'
 // INTERFACES
 import { option } from './interfaces/option'
 
-export { CustomInput, BasePage, PageTitle, CustomButton, BaseSideBar, sideBarState, option }
+// ENUMS
+import { InputTypes } from './enums/inputTypes'
+
+export { CustomInput, BasePage, PageTitle, CustomButton, BaseSideBar, sideBarState, option, InputTypes }
