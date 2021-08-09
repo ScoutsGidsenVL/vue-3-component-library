@@ -1,13 +1,12 @@
 declare const _default: import("vue").DefineComponent<{
-    name: {
-        type: StringConstructor;
-        default: string;
+    isLoading: {
+        type: BooleanConstructor;
+        required: true;
+        default: boolean;
     };
 }, unknown, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, Record<string, any>, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<{
-    name?: unknown;
+    isLoading?: unknown;
 } & {
-    name: string;
-} & {}>, {
-    name: string;
-}>;
+    isLoading: boolean;
+} & {}>, {}>;
 export default _default;

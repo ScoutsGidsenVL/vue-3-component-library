@@ -5,7 +5,7 @@ module.exports = {
   },
   extends: ['plugin:vue/vue3-recommended', 'eslint:recommended', 'prettier', '@vue/typescript'],
   rules: {
-    'vue/no-multiple-template-root': 0,
+    'vue/no-multiple-template-root': 'off',
     'no-unused-vars': 'off',
     'one-component-per-file': 'off'
   },

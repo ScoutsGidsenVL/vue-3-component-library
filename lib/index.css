@@ -1,0 +1,37 @@
+.loading a[data-v-56556b4f] {
+  background-color: #7b8f1c;
+}
+
+html {
+  scroll-behavior: auto !important;
+}
+
+@media (min-width: 0px) and (max-width: 640px) {
+  .container {
+    max-width: 100% !important;
+  }
+}
+header[data-v-c69e8e72] {
+  background: #f9f9f9 url(/bg-texture-small.jpg) no-repeat;
+  background-size: cover;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.08);
+  display: block;
+  position: sticky;
+  top: 0;
+}
+
+.group-search__title[data-v-c69e8e72]:before {
+  animation: backgroundReveal 0s 0s both;
+}
+
+.group-search__title[data-v-c69e8e72]:after {
+  animation: backgroundReveal 0s 0s both;
+}
+
+.group-search__title span[data-v-c69e8e72] {
+  animation: fadeIn 0s 0s both;
+}
+
+.custom-background[data-v-c69e8e72] {
+  background: #f9f9f9 url(/bg-texture-small.jpg);
+}
