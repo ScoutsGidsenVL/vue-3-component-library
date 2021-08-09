@@ -9,6 +9,7 @@
   >
     <a class="btn-simple-dark mt-0 relative">
       <span :class="{ 'opacity-0': isSubmitting }">{{ text }}</span>
+      <slot name="icon" />
       <div v-show="isSubmitting" class="absolute flex justify-center items-center w-full left-0 top-0 h-full">
         <loader :is-loading="isSubmitting" />
       </div>
