@@ -23,5 +23,5 @@ export default {
     }
   ],
   plugins: [vue(), typescript(), peerDepsExternal(), resolve(), commonjs(), scss()],
-  external: ['vue']
+  external: ['vue', '@vee-validate/rules', 'vee-validate', '@vee-validate/i18n']
 }
