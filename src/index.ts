@@ -16,5 +16,19 @@ import { InputTypes } from './enums/inputTypes'
 
 //VEE VALIDATE
 import { defineRules } from './veeValidate/rules'
+import { scrollToFirstError, useFormSendWithSuccess, useScrollToTop } from './veeValidate/helpers'
 
-export { CustomInput, BasePage, PageTitle, CustomButton, BaseSideBar, sideBarState, option, InputTypes, defineRules }
+export {
+  CustomInput,
+  BasePage,
+  PageTitle,
+  CustomButton,
+  BaseSideBar,
+  sideBarState,
+  option,
+  InputTypes,
+  defineRules,
+  scrollToFirstError,
+  useFormSendWithSuccess,
+  useScrollToTop
+}

@@ -7,4 +7,5 @@ import { sideBarState } from './types/sideBarState';
 import { option } from './interfaces/option';
 import { InputTypes } from './enums/inputTypes';
 import { defineRules } from './veeValidate/rules';
-export { CustomInput, BasePage, PageTitle, CustomButton, BaseSideBar, sideBarState, option, InputTypes, defineRules };
+import { scrollToFirstError, useFormSendWithSuccess, useScrollToTop } from './veeValidate/helpers';
+export { CustomInput, BasePage, PageTitle, CustomButton, BaseSideBar, sideBarState, option, InputTypes, defineRules, scrollToFirstError, useFormSendWithSuccess, useScrollToTop };
