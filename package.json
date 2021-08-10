@@ -8,12 +8,12 @@
   },
   "dependencies": {
     "@vee-validate/i18n": "^4.1.20",
-    "@vee-validate/rules": "^4.1.20",
+    "@vee-validate/rules": "^4.4.7",
     "core-js": "^3.6.5",
-    "vee-validate": "^4.4.0-alpha.2",
+    "sass-loader": "^8.0.2",
+    "vee-validate": "^4.4.9",
     "vue": "^3.0.0",
-    "vuex": "^4.0.0-0",
-    "sass-loader": "^8.0.2"
+    "vuex": "^4.0.0-0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^19.0.2",

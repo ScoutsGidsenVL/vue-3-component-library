@@ -14,4 +14,7 @@ import { option } from './interfaces/option'
 // ENUMS
 import { InputTypes } from './enums/inputTypes'
 
-export { CustomInput, BasePage, PageTitle, CustomButton, BaseSideBar, sideBarState, option, InputTypes }
+//VEE VALIDATE
+import { defineRules } from './veeValidate/rules'
+
+export { CustomInput, BasePage, PageTitle, CustomButton, BaseSideBar, sideBarState, option, InputTypes, defineRules }

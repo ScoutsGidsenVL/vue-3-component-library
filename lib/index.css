@@ -1,7 +1,3 @@
-.loading a[data-v-56556b4f] {
-  background-color: #7b8f1c;
-}
-
 html {
   scroll-behavior: auto !important;
 }
@@ -11,6 +7,10 @@ html {
     max-width: 100% !important;
   }
 }
+.loading a[data-v-56556b4f] {
+  background-color: #7b8f1c;
+}
+
 header[data-v-c69e8e72] {
   background: #f9f9f9 url(/bg-texture-small.jpg) no-repeat;
   background-size: cover;

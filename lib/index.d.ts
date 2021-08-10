@@ -6,4 +6,5 @@ import BaseSideBar from './components/baseSideBar/BaseSideBar.vue';
 import { sideBarState } from './types/sideBarState';
 import { option } from './interfaces/option';
 import { InputTypes } from './enums/inputTypes';
-export { CustomInput, BasePage, PageTitle, CustomButton, BaseSideBar, sideBarState, option, InputTypes };
+import { defineRules } from './veeValidate/rules';
+export { CustomInput, BasePage, PageTitle, CustomButton, BaseSideBar, sideBarState, option, InputTypes, defineRules };
