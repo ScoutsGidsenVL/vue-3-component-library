@@ -12,7 +12,7 @@ export default defineComponent({
 })
 </script>
 
-<style lang="scss">
+<style>
 html {
   scroll-behavior: auto !important;
 }

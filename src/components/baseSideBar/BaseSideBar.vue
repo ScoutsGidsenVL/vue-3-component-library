@@ -11,13 +11,21 @@
             />
           </svg>
         </div>
-        <h1 class="group-search__title mb-3 mt-0 inline-block relative text-xl" style="font-size: 2rem; position: initial; transition: none !important">
+        <h1 class="group-search__title mb-3 mt-0 inline-block relative text-xl my-background" style="font-size: 2rem; position: initial; transition: none !important">
           <span class="animate-none">{{ title }}</span>
         </h1>
         <form v-if="options && !isEdit" action="">
           <div class="flex gap-7">
             <div v-for="option in options" :key="option">
-              <input :id="option.value + name" v-model="selected" class="cursor-pointer" type="radio" :name="option.value + name" :value="option.value + name" @change="emitOption()" />
+              <input
+                :id="option.value + name"
+                v-model="selected"
+                class="cursor-pointer"
+                type="radio"
+                :name="option.value + name"
+                :value="option.value + name"
+                @change="emitOption()"
+              />
               <label :for="option.value + name" class="ml-2">{{ option.text }}</label>
             </div>
           </div>
@@ -121,5 +129,8 @@ header {
 
 .custom-background {
   background: #f9f9f9 url(/bg-texture-small.jpg);
+}
+.my-background {
+  background-color: red;
 }
 </style>

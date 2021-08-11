@@ -30,5 +30,5 @@ export {
   defineRules,
   scrollToFirstError,
   useFormSendWithSuccess,
-  useScrollToTop,
+  useScrollToTop
 }
