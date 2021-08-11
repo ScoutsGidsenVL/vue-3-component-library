@@ -5,6 +5,7 @@ import typescript from 'rollup-plugin-typescript2'
 import vue from 'rollup-plugin-vue'
 import packageJson from './package.json'
 import postcss from 'rollup-plugin-postcss'
+import postcssImport from 'postcss-import'
 
 export default {
   input: 'src/index.ts',
@@ -22,6 +23,16 @@ export default {
       globals: { vue: 'Vue' }
     }
   ],
-  plugins: [vue({ preprocessStyles: true }), postcss(), typescript(), peerDepsExternal(), resolve(), commonjs()],
+  plugins: [
+    vue({ preprocessStyles: true }),
+    postcss({
+      extract: true,
+      plugins: [postcssImport()]
+    }),
+    typescript(),
+    peerDepsExternal(),
+    resolve(),
+    commonjs()
+  ],
   external: ['vue', '@vee-validate/rules', 'vee-validate', '@vee-validate/i18n']
 }
