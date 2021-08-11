@@ -4,6 +4,7 @@ import BasePage from './components/basePage/BasePage.vue'
 import PageTitle from './components/pageTitle/PageTitle.vue'
 import CustomButton from './components/customButton/CustomButton.vue'
 import BaseSideBar from './components/baseSideBar/BaseSideBar.vue'
+import Loader from './components/loader/Loader.vue'
 
 // TYPES
 import { sideBarState } from './types/sideBarState'
@@ -30,5 +31,6 @@ export {
   defineRules,
   scrollToFirstError,
   useFormSendWithSuccess,
-  useScrollToTop
+  useScrollToTop,
+  Loader
 }
