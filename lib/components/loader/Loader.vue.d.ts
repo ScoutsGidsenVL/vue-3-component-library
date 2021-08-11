@@ -8,5 +8,5 @@ declare const _default: import("vue").DefineComponent<{
     isLoading?: unknown;
 } & {
     isLoading: boolean;
-} & {}>, {}>;
+} & {}> & {}, {}>;
 export default _default;

@@ -111,7 +111,7 @@ declare const _default: import("vue").DefineComponent<{
     extraInfo?: string | undefined;
     placeholder?: string | undefined;
     step?: string | undefined;
-}>, {
+}> & {}, {
     type: string;
     value: string;
     rules: string;

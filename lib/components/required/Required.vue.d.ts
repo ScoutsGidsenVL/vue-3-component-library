@@ -8,7 +8,7 @@ declare const _default: import("vue").DefineComponent<{
     rules?: unknown;
 } & {
     rules: string;
-} & {}>, {
+} & {}> & {}, {
     rules: string;
 }>;
 export default _default;

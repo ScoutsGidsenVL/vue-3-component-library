@@ -52,7 +52,7 @@ export const useScrollToTop = (): {
   return {
     formDiv,
     scrollToTop,
-    scrollToTopOfPage
+    scrollToTopOfPage,
   }
 }
 
@@ -80,6 +80,6 @@ export const useFormSendWithSuccess = <T>(
   }
 
   return {
-    formSendWithSuccess
+    formSendWithSuccess,
   }
 }

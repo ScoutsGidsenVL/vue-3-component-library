@@ -49,7 +49,7 @@ declare const _default: import("vue").DefineComponent<{
 } & {
     options?: String[] | undefined;
     name?: string | undefined;
-}>, {
+}> & {}, {
     isDisplay: boolean;
     selection: string;
     width: string;

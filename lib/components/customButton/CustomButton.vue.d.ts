@@ -28,7 +28,7 @@ declare const _default: import("vue").DefineComponent<{
     disabled: boolean;
     type: string;
     isSubmitting: boolean;
-} & {}>, {
+} & {}> & {}, {
     disabled: boolean;
     type: string;
     isSubmitting: boolean;
