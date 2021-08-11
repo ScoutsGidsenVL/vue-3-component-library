@@ -1,3 +1,9 @@
+import './index.css';
+import './css/scouts1.css';
+import './css/scouts2.css';
+import './css/scouts3.css';
+import './css/scouts4.css';
+import './css/scouts5.css';
 import CustomInput from './components/inputs/CustomInput.vue';
 import BasePage from './components/basePage/BasePage.vue';
 import PageTitle from './components/pageTitle/PageTitle.vue';

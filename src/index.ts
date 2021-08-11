@@ -1,3 +1,11 @@
+// CSS
+import './index.css'
+import './css/scouts1.css'
+import './css/scouts2.css'
+import './css/scouts3.css'
+import './css/scouts4.css'
+import './css/scouts5.css'
+
 // COMPONENTS
 import CustomInput from './components/inputs/CustomInput.vue'
 import BasePage from './components/basePage/BasePage.vue'
