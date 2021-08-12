@@ -1,17 +1,17 @@
 <template>
   <button
     :disabled="disabled || isSubmitting"
-    class="btn-simple-dark"
+    class="btn-simple-dark "
     :type="type"
     :class="{
       ' animate-pulse2 loading': isSubmitting
     }"
   >
-    <a class="btn-simple-dark mt-0 relative">
+    <a class="btn-simple-dark  mt-0 relative">
       <span :class="{ 'opacity-0': isSubmitting }">{{ text }}</span>
       <slot name="icon" />
       <div v-show="isSubmitting" class="absolute flex justify-center items-center w-full left-0 top-0 h-full">
-        <loader :is-loading="isSubmitting" />
+        <loader size="5" :is-loading="isSubmitting" />
       </div>
     </a>
   </button>
@@ -44,6 +44,11 @@ export default defineComponent({
       type: Boolean,
       default: false,
       required: false
+    },
+    hoverColor: {
+      type: String,
+      required: false,
+      default: 'green'
     }
   }
 })
