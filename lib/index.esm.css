@@ -193149,16 +193149,6 @@ tr .ajax-progress-throbber .throbber {
   content: '';
 }
 
-html {
-  scroll-behavior: auto !important;
-}
-
-@media (min-width: 0px) and (max-width: 640px) {
-  .container {
-    max-width: 100% !important;
-  }
-}
-
 .loading a[data-v-56556b4f] {
   background-color: #7b8f1c;
 }
@@ -193193,4 +193183,18 @@ header[data-v-c69e8e72] {
 
 .my-background[data-v-c69e8e72] {
   background-color: red;
+}
+
+html {
+  scroll-behavior: auto !important;
+}
+
+@media (min-width: 0px) and (max-width: 640px) {
+  .container {
+    max-width: 100% !important;
+  }
+}
+
+custom-index[data-v-1e366b3a] {
+  z-index: 9999999;
 }

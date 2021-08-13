@@ -7,11 +7,12 @@ import './css/scouts4.css'
 import './css/scouts5.css'
 
 // COMPONENTS
-import CustomInput from './components/inputs/CustomInput.vue'
-import BasePage from './components/basePage/BasePage.vue'
-import PageTitle from './components/pageTitle/PageTitle.vue'
 import CustomButton from './components/customButton/CustomButton.vue'
 import BaseSideBar from './components/baseSideBar/BaseSideBar.vue'
+import CustomInput from './components/inputs/CustomInput.vue'
+import PageTitle from './components/pageTitle/PageTitle.vue'
+import BasePage from './components/basePage/BasePage.vue'
+import Warning from './components/modals/Warning.vue'
 import Loader from './components/loader/Loader.vue'
 
 // TYPES
@@ -28,17 +29,18 @@ import { defineRules } from './veeValidate/rules'
 import { scrollToFirstError, useFormSendWithSuccess, useScrollToTop } from './veeValidate/helpers'
 
 export {
-  CustomInput,
-  BasePage,
-  PageTitle,
-  CustomButton,
-  BaseSideBar,
-  sideBarState,
-  option,
-  InputTypes,
-  defineRules,
-  scrollToFirstError,
   useFormSendWithSuccess,
+  scrollToFirstError,
   useScrollToTop,
-  Loader
+  CustomButton,
+  sideBarState,
+  CustomInput,
+  BaseSideBar,
+  defineRules,
+  InputTypes,
+  PageTitle,
+  BasePage,
+  option,
+  Loader,
+  Warning
 }
