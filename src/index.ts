@@ -14,6 +14,7 @@ import PageTitle from './components/pageTitle/PageTitle.vue'
 import BasePage from './components/basePage/BasePage.vue'
 import Warning from './components/modals/Warning.vue'
 import Loader from './components/loader/Loader.vue'
+import SuccessToast from './components/toast/SuccessToast.vue'
 
 // TYPES
 import { sideBarState } from './types/sideBarState'
@@ -42,5 +43,6 @@ export {
   BasePage,
   option,
   Loader,
-  Warning
+  Warning,
+  SuccessToast
 }
