@@ -18,7 +18,7 @@ export default defineComponent({
     size: {
       type: String,
       required: false,
-      default: 'sm'
+      default: '5'
     },
     color: {
       type: String,

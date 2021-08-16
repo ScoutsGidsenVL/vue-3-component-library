@@ -24,6 +24,11 @@ declare const _default: import("vue").DefineComponent<{
         type: StringConstructor;
         required: false;
     };
+    isLoading: {
+        type: BooleanConstructor;
+        required: false;
+        default: boolean;
+    };
 }, {
     rightButtonClicked: () => void;
     leftButtonClicked: () => void;
@@ -34,11 +39,13 @@ declare const _default: import("vue").DefineComponent<{
     color?: unknown;
     leftButton?: unknown;
     rightButton?: unknown;
+    isLoading?: unknown;
 } & {
     title: string;
     text: string;
     isDisplayed: boolean;
     color: string;
+    isLoading: boolean;
 } & {
     leftButton?: string | undefined;
     rightButton?: string | undefined;
@@ -47,5 +54,6 @@ declare const _default: import("vue").DefineComponent<{
     onRightButtonClicked?: ((...args: any[]) => any) | undefined;
 }, {
     color: string;
+    isLoading: boolean;
 }>;
 export default _default;
