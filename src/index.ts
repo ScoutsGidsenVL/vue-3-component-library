@@ -15,6 +15,7 @@ import BasePage from './components/basePage/BasePage.vue'
 import Warning from './components/modals/Warning.vue'
 import Loader from './components/loader/Loader.vue'
 import SuccessToast from './components/toast/SuccessToast.vue'
+import Required from './components/required/Required.vue'
 
 // TYPES
 import { sideBarState } from './types/sideBarState'
@@ -44,5 +45,6 @@ export {
   option,
   Loader,
   Warning,
-  SuccessToast
+  SuccessToast,
+  Required
 }
