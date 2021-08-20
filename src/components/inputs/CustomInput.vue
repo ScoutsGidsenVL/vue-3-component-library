@@ -1,14 +1,16 @@
 <template>
   <div>
-    <strong v-if="!hideInput && label">
+    <strong v-if="!hideInput && label && type !== InputTypes.CHECK">
       <p>
         {{ label }}
         <required :rules="rules" />
       </p>
     </strong>
+
     <div v-if="extraInfo" style="font-size: 13px">
       <label>{{ extraInfo }}</label>
     </div>
+
     <div>
       <slot />
     </div>
@@ -18,7 +20,7 @@
       }"
     >
       <input
-        v-if="type !== InputTypes.TEXT_AREA && !hideInput && type !== InputTypes.TIME"
+        v-if="type !== InputTypes.TEXT_AREA && !hideInput && type !== InputTypes.TIME && type !== InputTypes.CHECK"
         v-model="inputValue"
         class="bg-lightGray p-2 min-w-0 w-100"
         :min="min"
@@ -54,6 +56,13 @@
       maxlength="500"
       :disabled="disabled || isSubmitting"
     />
+
+    <!-- CHECKBOX -->
+    <div v-if="type === InputTypes.CHECK && !hideInput">
+      <input :id="'checkbox-' + name" class="cursor-pointer" :type="InputTypes.CHECK" :name="'checkbox-' + name" :value="name" @change="emitValue()" />
+      <label :for="'checkbox-' + name" class="ml-2">{{ label }}</label>
+    </div>
+
     <span :name="name">
       <ErrorMessage :name="name" class="text-red text-sm block mt-1 w-80" />
     </span>
@@ -76,6 +85,13 @@ export default defineComponent({
     Required
   },
   props: {
+    modelValue: {
+      type: Array,
+      required: false,
+      default: () => {
+        return []
+      }
+    },
     name: {
       type: String,
       required: true
@@ -150,30 +166,48 @@ export default defineComponent({
       default: false
     }
   },
-  setup(props) {
-    const { value: inputValue } = useField(props.name, props.rules, {
-      initialValue: props.value
-    })
+  emits: ['update:modelValue'],
+  setup(props, context) {
+    if (props.type !== InputTypes.CHECK) {
+      const { value: inputValue } = useField(props.name, props.rules, {
+        initialValue: props.value
+      })
 
-    const cardNumberSpace = () => {
-      if (props.name === 'victim.bankAccount') {
-        inputValue.value = inputValue.value
-          .replace(/[^\dA-Z]/g, '')
-          .replace(/(.{4})/g, '$1 ')
-          .trim()
+      const cardNumberSpace = () => {
+        if (props.name === 'victim.bankAccount') {
+          inputValue.value = inputValue.value
+            .replace(/[^\dA-Z]/g, '')
+            .replace(/(.{4})/g, '$1 ')
+            .trim()
+        }
       }
-    }
 
-    watch(
-      () => inputValue.value,
-      () => {
-        cardNumberSpace()
+      watch(
+        () => inputValue.value,
+        () => {
+          cardNumberSpace()
+        }
+      )
+
+      return {
+        InputTypes,
+        inputValue
       }
-    )
+    } else {
+      // IF THE TYPE IS A CHECKBOX IS DOES NOT NEED A USEFIELD FOR VEE VALIDATE
+      const emitValue = () => {
+        if (props.modelValue.includes(props.name)) {
+          props.modelValue.splice(props.modelValue.indexOf(props.name), 1)
+        } else {
+          props.modelValue.push(props.name)
+        }
+        context.emit('update:modelValue', props.modelValue)
+      }
 
-    return {
-      InputTypes,
-      inputValue
+      return {
+        InputTypes,
+        emitValue
+      }
     }
   }
 })

@@ -1,5 +1,10 @@
 import { InputTypes } from '../../enums/inputTypes';
 declare const _default: import("vue").DefineComponent<{
+    modelValue: {
+        type: ArrayConstructor;
+        required: false;
+        default: () => never[];
+    };
     name: {
         type: StringConstructor;
         required: true;
@@ -76,7 +81,13 @@ declare const _default: import("vue").DefineComponent<{
 }, {
     InputTypes: typeof InputTypes;
     inputValue: import("vue").Ref<string> | import("vue").WritableComputedRef<string>;
-}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, Record<string, any>, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<{
+    emitValue?: undefined;
+} | {
+    InputTypes: typeof InputTypes;
+    emitValue: () => void;
+    inputValue?: undefined;
+}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, "update:modelValue"[], "update:modelValue", import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<{
+    modelValue?: unknown;
     name?: unknown;
     label?: unknown;
     type?: unknown;
@@ -95,6 +106,7 @@ declare const _default: import("vue").DefineComponent<{
     isSubmitting?: unknown;
 } & {
     name: string;
+    modelValue: unknown[];
     label: string;
     type: string;
     value: string;
@@ -111,7 +123,10 @@ declare const _default: import("vue").DefineComponent<{
     extraInfo?: string | undefined;
     placeholder?: string | undefined;
     step?: string | undefined;
-}> & {}, {
+}> & {
+    "onUpdate:modelValue"?: ((...args: any[]) => any) | undefined;
+}, {
+    modelValue: unknown[];
     type: string;
     value: string;
     rules: string;

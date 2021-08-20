@@ -8,14 +8,15 @@ import './css/scouts5.css'
 
 // COMPONENTS
 import CustomButton from './components/customButton/CustomButton.vue'
+import CustomHeader from './components/customHeader/CustomHeader.vue'
 import BaseSideBar from './components/baseSideBar/BaseSideBar.vue'
+import SuccessToast from './components/toast/SuccessToast.vue'
 import CustomInput from './components/inputs/CustomInput.vue'
 import PageTitle from './components/pageTitle/PageTitle.vue'
 import BasePage from './components/basePage/BasePage.vue'
+import Required from './components/required/Required.vue'
 import Warning from './components/modals/Warning.vue'
 import Loader from './components/loader/Loader.vue'
-import SuccessToast from './components/toast/SuccessToast.vue'
-import Required from './components/required/Required.vue'
 
 // TYPES
 import { sideBarState } from './types/sideBarState'
@@ -27,8 +28,8 @@ import { option } from './interfaces/option'
 import { InputTypes } from './enums/inputTypes'
 
 //VEE VALIDATE
-import { defineRules } from './veeValidate/rules'
 import { scrollToFirstError, useFormSendWithSuccess, useScrollToTop } from './veeValidate/helpers'
+import { defineRules } from './veeValidate/rules'
 
 export {
   useFormSendWithSuccess,
@@ -36,15 +37,16 @@ export {
   useScrollToTop,
   CustomButton,
   sideBarState,
+  SuccessToast,
   CustomInput,
   BaseSideBar,
   defineRules,
+  CustomHeader,
   InputTypes,
   PageTitle,
   BasePage,
-  option,
-  Loader,
+  Required,
   Warning,
-  SuccessToast,
-  Required
+  option,
+  Loader
 }
