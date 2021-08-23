@@ -59,7 +59,15 @@
 
     <!-- CHECKBOX -->
     <div v-if="type === InputTypes.CHECK && !hideInput">
-      <input :id="'checkbox-' + name" class="cursor-pointer" :type="InputTypes.CHECK" :name="'checkbox-' + name" :value="name" @change="emitValue()" />
+      <input
+        v-model="modelValue"
+        :id="'checkbox-' + name"
+        class="cursor-pointer"
+        :type="InputTypes.CHECK"
+        :name="'checkbox-' + name"
+        :value="name"
+        @change="emitValue()"
+      />
       <label :for="'checkbox-' + name" class="ml-2">{{ label }}</label>
     </div>
 
