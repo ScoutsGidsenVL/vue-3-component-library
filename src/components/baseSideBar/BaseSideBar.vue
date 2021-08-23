@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div v-if="isDisplay" class="h-full w-full fixed top-0 left-0 overflow-x-hidden bg-black bg-opacity-20" @click="hideSideBar()"></div>
+    <div v-if="isDisplay" class="h-full w-full fixed top-0 left-0 overflow-x-hidden bg-black bg-opacity-20 z-40" @click="hideSideBar()"></div>
 
-    <div :class="{ 'd-flex': isDisplay, 'd-none': !isDisplay }" class="bg-white fixed flex-col top-0 right-0 h-full z-20 xs:w-11/12 sm:w-11/12 md:w-100 max-w-md">
+    <div :class="{ 'd-flex': isDisplay, 'd-none': !isDisplay }" class="bg-white fixed flex-col top-0 right-0 h-full z-50 xs:w-11/12 sm:w-11/12 md:w-100 max-w-md">
       <div class="px-4 pb-2 pt-3 custom-background">
         <div class="mb-4 cursor-pointer" @click="hideSideBar()">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">

@@ -1,5 +1,5 @@
 <template>
-  <div v-if="isDisplayed" class="h-full w-full fixed top-0 left-0 overflow-x-hidden bg-darkGray bg-opacity-20 custom-index">
+  <div v-if="isDisplayed" class="h-full w-full fixed top-0 left-0 overflow-x-hidden bg-black bg-opacity-20 z-40">
     <div class="flex h-screen justify-center items-center">
       <div class="align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
         <div v-if="isLoading" class="h-full w-full fixed top-0 left-0 overflow-x-hidden bg-black bg-opacity-20">
@@ -101,9 +101,3 @@ export default defineComponent({
   }
 })
 </script>
-
-<style scoped>
-custom-index {
-  z-index: 9999999;
-}
-</style>

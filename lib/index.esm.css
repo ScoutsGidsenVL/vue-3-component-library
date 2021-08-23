@@ -1,3 +1,7 @@
+custom-index[data-v-1e366b3a] {
+  z-index: 9999999;
+}
+
 /*! tailwindcss v2.2.7 | MIT License | https://tailwindcss.com */
 
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
@@ -193193,8 +193197,4 @@ html {
   .container {
     max-width: 100% !important;
   }
-}
-
-custom-index[data-v-1e366b3a] {
-  z-index: 9999999;
 }
