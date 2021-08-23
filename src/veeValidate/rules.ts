@@ -12,15 +12,25 @@ export const defineRules = () => {
     generateMessage: localize({
       en: {
         messages: {
-          required: 'This field is required',
-        },
+          required: 'This field is required'
+        }
       },
       nl: {
         messages: {
-          required: 'Dit veld is verplicht',
-        },
-      },
-    }),
+          required: 'Dit veld is verplicht'
+        }
+      }
+    })
+  })
+
+  // KAMPVISUM
+
+  defineRule('minimumOneSection', (value: Array<string>) => {
+    if (value.length === 0) {
+      return 'Selecteer er minstens 1.'
+    }
+
+    return true
   })
 
   setLocale('nl')
