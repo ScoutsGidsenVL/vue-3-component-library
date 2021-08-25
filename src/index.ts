@@ -11,6 +11,7 @@ import CustomButton from './components/customButton/CustomButton.vue'
 import CustomHeader from './components/customHeader/CustomHeader.vue'
 import BaseSideBar from './components/baseSideBar/BaseSideBar.vue'
 import SuccessToast from './components/toast/SuccessToast.vue'
+import Breadcrumb from './components/breadcrumb/Breadcrumb.vue'
 import CustomInput from './components/inputs/CustomInput.vue'
 import PageTitle from './components/pageTitle/PageTitle.vue'
 import BasePage from './components/basePage/BasePage.vue'
@@ -38,10 +39,11 @@ export {
   CustomButton,
   sideBarState,
   SuccessToast,
+  CustomHeader,
   CustomInput,
   BaseSideBar,
   defineRules,
-  CustomHeader,
+  Breadcrumb,
   InputTypes,
   PageTitle,
   BasePage,
