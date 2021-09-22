@@ -7,7 +7,7 @@
       ' animate-pulse2 loading': isSubmitting
     }"
   >
-    <a class="btn-simple-dark  mt-0 relative">
+    <a class="btn-simple-dark  mt-0 relative" :class="extraStyle">
       <span :class="{ 'opacity-0': isSubmitting }">{{ text }}</span>
       <slot name="icon" />
       <div v-show="isSubmitting" class="absolute flex justify-center items-center w-full left-0 top-0 h-full">
@@ -49,6 +49,11 @@ export default defineComponent({
       type: String,
       required: false,
       default: 'green'
+    },
+    extraStyle: {
+      type: String,
+      required: false,
+      default: ''
     }
   }
 })
