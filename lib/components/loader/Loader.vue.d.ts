@@ -22,7 +22,7 @@ declare const _default: import("vue").DefineComponent<{
     isLoading: boolean;
     size: string;
     color: string;
-} & {}>, {
+} & {}> & {}, {
     size: string;
     color: string;
 }>;

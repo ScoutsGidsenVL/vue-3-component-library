@@ -80,7 +80,7 @@ declare const _default: import("vue").DefineComponent<{
     };
 }, {
     InputTypes: typeof InputTypes;
-    inputValue: import("vue").Ref<string>;
+    inputValue: import("vue").Ref<string> | import("vue").WritableComputedRef<string>;
     emitValue?: undefined;
 } | {
     InputTypes: typeof InputTypes;
@@ -110,7 +110,7 @@ declare const _default: import("vue").DefineComponent<{
     label: string;
     type: string;
     value: string;
-    rules: string | Function | Record<string, any>;
+    rules: string;
     disabled: boolean;
     min: string;
     maxlength: string;
@@ -129,7 +129,7 @@ declare const _default: import("vue").DefineComponent<{
     modelValue: unknown[];
     type: string;
     value: string;
-    rules: string | Function | Record<string, any>;
+    rules: string;
     disabled: boolean;
     min: string;
     maxlength: string;
