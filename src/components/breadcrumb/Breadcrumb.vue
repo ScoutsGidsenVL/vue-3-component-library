@@ -1,7 +1,4 @@
 <template>
-  <div class="narrow-breadcrumb">
-    <div class="breadcrumb-wrapper">
-      <div class="breadcrumb-wrapper__inner" data-sticky-class="is-sticky">
         <nav role="navigation" aria-labelledby="system-breadcrumb" class="breadcrumb-wrapper__nav">
           <h2 id="system-breadcrumb" class="visually-hidden">Kruimelpad</h2>
           <ol class="breadcrumb">
@@ -25,10 +22,6 @@
             </li>
           </ol>
         </nav>
-        <div class="breadcrumb-progress"></div>
-      </div>
-    </div>
-  </div>
 </template>
 
 <script lang="ts">

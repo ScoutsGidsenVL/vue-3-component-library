@@ -38,6 +38,9 @@ module.exports = {
       },
       lightRed: {
         DEFAULT: '#FBCCD4'
+      },
+      orange: {
+        DEFAULT: '#EABE22'
       }
     },
     container: {
@@ -56,8 +59,9 @@ module.exports = {
       },
       screens: {
         smo: { min: '0px', max: '768px' },
-        xs: { min: '0px', max: '640px' },
-        xxs: { min: '0px', max: '360px' }
+        xs: { min: '0px', max: '768px' },
+        xxs: { min: '0px', max: '360px' },
+        mxs: { min: '360px' }
       },
       keyframes: {
         pulse2: {

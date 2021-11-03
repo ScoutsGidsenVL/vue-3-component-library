@@ -7,13 +7,13 @@ import './css/scouts4.css'
 import './css/scouts5.css'
 
 // COMPONENTS
+import ScoutsDummyBar from './components/ScoutsDummyBar/ScoutsDummyBar.vue'
 import CustomButton from './components/customButton/CustomButton.vue'
 import CustomHeader from './components/customHeader/CustomHeader.vue'
 import BaseSideBar from './components/baseSideBar/BaseSideBar.vue'
 import SuccessToast from './components/toast/SuccessToast.vue'
 import Breadcrumb from './components/breadcrumb/Breadcrumb.vue'
 import CustomInput from './components/inputs/CustomInput.vue'
-import PageTitle from './components/pageTitle/PageTitle.vue'
 import BasePage from './components/basePage/BasePage.vue'
 import Required from './components/required/Required.vue'
 import Warning from './components/modals/Warning.vue'
@@ -36,6 +36,7 @@ export {
   useFormSendWithSuccess,
   scrollToFirstError,
   useScrollToTop,
+  ScoutsDummyBar,
   CustomButton,
   sideBarState,
   SuccessToast,
@@ -45,7 +46,6 @@ export {
   defineRules,
   Breadcrumb,
   InputTypes,
-  PageTitle,
   BasePage,
   Required,
   Warning,
