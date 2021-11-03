@@ -1,5 +1,5 @@
-import { PropType } from 'vue';
 import { RouteLocationNormalizedLoaded, Router } from 'vue-router';
+import { PropType } from 'vue';
 export interface breadcrumb {
     crumb?: string;
     uuid?: string;
@@ -18,6 +18,11 @@ declare const _default: import("vue").DefineComponent<{
         type: PropType<Router>;
         required: true;
     };
+    isInternetActive: {
+        type: BooleanConstructor;
+        required: false;
+        default: boolean;
+    };
 }, {
     route: RouteLocationNormalizedLoaded;
     breadcrumbs: import("vue").Ref<{
@@ -30,11 +35,14 @@ declare const _default: import("vue").DefineComponent<{
     home?: unknown;
     route?: unknown;
     router?: unknown;
+    isInternetActive?: unknown;
 } & {
     home: string;
     route: RouteLocationNormalizedLoaded;
     router: Router;
+    isInternetActive: boolean;
 } & {}> & {}, {
     home: string;
+    isInternetActive: boolean;
 }>;
 export default _default;
