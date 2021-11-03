@@ -42,7 +42,7 @@ declare const _default: import("vue").DefineComponent<{
     isSubmitting: boolean;
     hoverColor: string;
     extraStyle: string;
-} & {}> & {}, {
+} & {}>, {
     disabled: boolean;
     type: string;
     isSubmitting: boolean;

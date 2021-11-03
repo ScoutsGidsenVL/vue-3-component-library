@@ -34,7 +34,7 @@ declare const _default: import("vue").DefineComponent<{
     home: string;
     route: RouteLocationNormalizedLoaded;
     router: Router;
-} & {}> & {}, {
+} & {}>, {
     home: string;
 }>;
 export default _default;
