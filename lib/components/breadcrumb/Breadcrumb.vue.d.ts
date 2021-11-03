@@ -41,7 +41,7 @@ declare const _default: import("vue").DefineComponent<{
     route: RouteLocationNormalizedLoaded;
     router: Router;
     isInternetActive: boolean;
-} & {}> & {}, {
+} & {}>, {
     home: string;
     isInternetActive: boolean;
 }>;
