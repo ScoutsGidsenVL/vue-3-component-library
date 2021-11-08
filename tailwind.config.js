@@ -1,6 +1,11 @@
+const path = require('path');
+const colors = require('tailwindcss/colors');
+
 module.exports = {
-  purge: [],
-  darkMode: false, // or 'media' or 'class'
+  purge: [
+    path.resolve(__dirname, './node_modules/litepie-datepicker/**/*.js')
+  ],
+  darkMode: 'class', // or 'media' or 'class'
   theme: {
     colors: {
       black: {
@@ -41,7 +46,15 @@ module.exports = {
       },
       orange: {
         DEFAULT: '#EABE22'
-      }
+      },
+      lightOrange: {
+        DEFAULT: '#FFE99A'
+      },
+      dateGreen: {
+        light: '#F4F5D4',
+        DEFAULT: '#C7D121',
+        dark: '#444f0f',
+      },
     },
     container: {
       padding: {
@@ -53,6 +66,11 @@ module.exports = {
       }
     },
     extend: {
+      colors: {
+        // Change with you want it
+        'litepie-primary': colors.coolGray, // color system for light mode
+        'litepie-secondary': colors.black // color system for dark mode
+      },
       gridTemplateColumns: {
         list: '14% 19% 29% 25% 5% 8%',
         claims: '302% 30% 30% 10%'
@@ -80,7 +98,11 @@ module.exports = {
     }
   },
   variants: {
-    extend: {}
+    extend: {
+      cursor: ['disabled'],
+      textOpacity: ['disabled'],
+      textColor: ['disabled']
+    }
   },
   plugins: []
 }
