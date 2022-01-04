@@ -60,7 +60,6 @@
     <!-- CHECKBOX -->
     <div v-if="type === InputTypes.CHECK && !hideInput">
       <input
-        v-model="modelValue"
         :id="'checkbox-' + name"
         class="cursor-pointer"
         :type="InputTypes.CHECK"
@@ -68,7 +67,7 @@
         :value="name"
         @change="emitValue()"
       />
-      <label :for="'checkbox-' + name" class="ml-2">{{ label }}</label>
+      <label :for="'checkbox-' + name" class="ml-2 cursor-pointer">{{ label }}</label>
     </div>
 
     <span :name="name">
@@ -80,7 +79,7 @@
 <script lang="ts">
 import { ErrorMessage, FieldContext, useField } from 'vee-validate'
 import { InputTypes } from '../../enums/inputTypes'
-import { defineComponent, PropType, watch } from 'vue'
+import { defineComponent, PropType, watch, toRefs } from 'vue'
 import Required from '../required/Required.vue'
 import { required } from '@vee-validate/rules'
 import { defineRule, configure } from 'vee-validate'
@@ -176,6 +175,8 @@ export default defineComponent({
   },
   emits: ['update:modelValue'],
   setup(props, context) {
+      const { modelValue } = toRefs(props)
+
     if (props.type !== InputTypes.CHECK) {
       const { value: inputValue } = useField(props.name, props.rules, {
         initialValue: props.value
@@ -189,6 +190,7 @@ export default defineComponent({
             .trim()
         }
       }
+
 
       watch(
         () => inputValue.value,
@@ -204,12 +206,12 @@ export default defineComponent({
     } else {
       // IF THE TYPE IS A CHECKBOX IS DOES NOT NEED A USEFIELD FOR VEE VALIDATE
       const emitValue = () => {
-        if (props.modelValue.includes(props.name)) {
-          props.modelValue.splice(props.modelValue.indexOf(props.name), 1)
+        if (modelValue.value.includes(props.name)) {
+          modelValue.value.splice(modelValue.value.indexOf(props.name), 1)
         } else {
-          props.modelValue.push(props.name)
+          modelValue.value.push(props.name)
         }
-        context.emit('update:modelValue', props.modelValue)
+        context.emit('update:modelValue', modelValue.value)
       }
 
       return {
