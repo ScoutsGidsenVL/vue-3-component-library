@@ -105,16 +105,16 @@ export default defineComponent({
         let splittedValues = route.path.split('/')
         let t: breadcrumb = {}
 
-        const regexHasNumber = /\d/
+        const regexHasUuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$/
 
         splittedValues.forEach((splittedValue) => {
           if (splittedValue.length > 0) {
-            if (!regexHasNumber.test(splittedValue)) {
+            if (!regexHasUuid.test(splittedValue)) {
               t.crumb = splittedValue
             }
-            if (regexHasNumber.test(splittedValue)) {
+            if (regexHasUuid.test(splittedValue)) {
               t.uuid = splittedValue
-              breadcrumbs.value.push({ crumb: t.crumb, uuid: t.uuid })
+              breadcrumbs.value.push({ crumb: decodeURI(t.crumb ? t.crumb : ''), uuid: t.uuid })
               console.log('breadcrumbs: ', breadcrumbs.value)
             }
           }
