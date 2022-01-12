@@ -94,6 +94,10 @@ module.exports = {
       animation: {
         wiggle: 'wiggle 1s ease-in-out infinite',
         pulse2: 'pulse2 2s cubic-bezier(0.4, 0, 0.6, 1) infinite'
+      },
+      width: {
+        '99': '30rem',
+        '100': '32rem'
       }
     }
   },

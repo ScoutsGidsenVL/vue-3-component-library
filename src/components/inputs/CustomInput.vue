@@ -31,6 +31,7 @@
         :class="{ 'opacity-0': isSubmitting }"
         :disabled="disabled || isSubmitting"
         :placeholder="placeholder"
+        @change="textAreaEmitValue()"
       />
 
       <input
@@ -178,6 +179,7 @@ export default defineComponent({
       const { modelValue } = toRefs(props)
 
     if (props.type !== InputTypes.CHECK) {
+      
       const { value: inputValue } = useField(props.name, props.rules, {
         initialValue: props.value
       })
@@ -190,7 +192,6 @@ export default defineComponent({
             .trim()
         }
       }
-
 
       watch(
         () => inputValue.value,
