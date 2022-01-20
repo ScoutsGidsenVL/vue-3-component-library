@@ -33,8 +33,8 @@
           </div>
         </div>
         <div v-if="leftButon || rightButton" class="bg-gray px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse gap-3">
-          <custom-button v-if="rightButton" @click="rightButtonClicked()" class="w-full inline-flex justify-center sm:w-auto" :text="rightButton" />
-          <custom-button v-if="leftButton" @click="leftButtonClicked()" class="w-full inline-flex justify-center sm:w-auto" :text="leftButton" />
+          <custom-button v-if="rightButton" @click="rightButtonClicked()" class="w-full inline-flex justify-center sm:w-auto" :text="rightButton" type="button" />
+          <custom-button v-if="leftButton" @click="leftButtonClicked()" class="w-full inline-flex justify-center sm:w-auto" :text="leftButton" type="button" />
         </div>
       </div>
     </div>

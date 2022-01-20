@@ -96,8 +96,12 @@ module.exports = {
         pulse2: 'pulse2 2s cubic-bezier(0.4, 0, 0.6, 1) infinite'
       },
       width: {
+        '5.5': '1.4rem',
         '98': '30rem',
         '99': '32rem'
+      },
+      height: {
+        '5.5': '1.4rem',
       }
     }
   },
