@@ -6,3 +6,4 @@ export type sideBarState<T> =
   | { state: 'list' }
   | { state: 'new' }
   | { state: 'hide' }
+  | { state: 'search' }

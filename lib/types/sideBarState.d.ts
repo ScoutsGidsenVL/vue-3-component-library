@@ -7,4 +7,6 @@ export declare type sideBarState<T> = {
     state: 'new';
 } | {
     state: 'hide';
+} | {
+    state: 'search';
 };
