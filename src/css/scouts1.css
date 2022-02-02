@@ -14561,14 +14561,14 @@ a.text-dark:hover {
   font-style: italic;
   font-display: swap;
 }
-@font-face {
+/* @font-face {
   font-family: museo-sans;
-  src: url(/themes/custom/scouts_theme/dist/css/../../fonts/museo-sans/MuseoSans_500-webfont.woff2) format('woff2'),
-    url(/themes/custom/scouts_theme/dist/css/../../fonts/museo-sans/MuseoSans_500-webfont.woff) format('woff');
+  src: url(./fonts/MuseoSans_500-webfont.woff2) format('woff2'),
+    url(./fonts//MuseoSans_500-webfont.woff) format('woff');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
-}
+} */
 @font-face {
   font-family: museo-sans;
   src: url(/themes/custom/scouts_theme/dist/css/../../fonts/museo-sans/MuseoSans_500_Italic-webfont.woff2) format('woff2'),
@@ -14593,14 +14593,14 @@ a.text-dark:hover {
   font-style: italic;
   font-display: swap;
 }
-@font-face {
+/* @font-face {
   font-family: museo-sans;
-  src: url(/themes/custom/scouts_theme/dist/css/../../fonts/museo-sans/MuseoSans_900-webfont.woff2) format('woff2'),
-    url(/themes/custom/scouts_theme/dist/css/../../fonts/museo-sans/MuseoSans_900-webfont.woff) format('woff');
+  src: url(./fonts/MuseoSans_900-webfont.woff2) format('woff2'),
+    url(./fonts/MuseoSans_900-webfont.woff) format('woff');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
-}
+} */
 @font-face {
   font-family: museo-sans;
   src: url(/themes/custom/scouts_theme/dist/css/../../fonts/museo-sans/MuseoSans_900_Italic-webfont.woff2) format('woff2'),
