@@ -7,6 +7,9 @@ module.exports = {
   ],
   darkMode: 'class', // or 'media' or 'class'
   theme: {
+    fontFamily: {
+      'museo-sans': ['Museo Sans']
+    },
     colors: {
       black: {
         DEFAULT: '#212529'
