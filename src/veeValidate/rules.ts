@@ -1,9 +1,10 @@
 import { localize, setLocale } from '@vee-validate/i18n'
 import { defineRule, configure } from 'vee-validate'
-import { required } from '@vee-validate/rules'
+import { required, email } from '@vee-validate/rules'
 
 export const defineRules = () => {
   defineRule('required', required)
+  defineRule('email', email)
 
   configure({
     // Generates an English message locale generator
@@ -12,12 +13,14 @@ export const defineRules = () => {
     generateMessage: localize({
       en: {
         messages: {
-          required: 'This field is required'
+          required: 'This field is required',
+          email: 'Not a valid email',
         }
       },
       nl: {
         messages: {
-          required: 'Dit veld is verplicht'
+          required: 'Dit veld is verplicht',
+          email: 'Geen geldig email'
         }
       }
     })

@@ -6,5 +6,6 @@ export enum InputTypes {
   DATE = 'date',
   TIME = 'time',
   TEXT = 'text',
-  TEL = 'tel'
+  TEL = 'tel',
+  RADIO = 'radio'
 }
