@@ -8,6 +8,7 @@ import './css/scouts5.css'
 
 // COMPONENTS
 import ScoutsDummyBar from './components/ScoutsDummyBar/ScoutsDummyBar.vue'
+import CustomButtonSmall from './components/customButtonSmall/CustomButtonSmall.vue'
 import CustomButton from './components/customButton/CustomButton.vue'
 import CustomHeader from './components/customHeader/CustomHeader.vue'
 import BaseSideBar from './components/baseSideBar/BaseSideBar.vue'
@@ -33,6 +34,7 @@ import { scrollToFirstError, useFormSendWithSuccess, useScrollToTop } from './ve
 import { defineRules } from './veeValidate/rules'
 
 export {
+  CustomButtonSmall,
   useFormSendWithSuccess,
   scrollToFirstError,
   useScrollToTop,

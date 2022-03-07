@@ -31,7 +31,6 @@
         :class="{ 'opacity-0': isSubmitting }"
         :disabled="disabled || isSubmitting"
         :placeholder="placeholder"
-        @change="textAreaEmitValue()"
       />
 
       <input

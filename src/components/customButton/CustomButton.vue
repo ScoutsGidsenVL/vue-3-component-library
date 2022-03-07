@@ -21,7 +21,7 @@ import { defineComponent } from 'vue'
 import Loader from '../loader/Loader.vue'
 
 export default defineComponent({
-  name: 'CustomButton',
+  name: 'CustomButtonSmall',
   components: {
     loader: Loader
   },
