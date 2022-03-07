@@ -60,7 +60,7 @@ export default defineComponent({
 </script>
 <style scoped>
 .loading a {
-  background-color: #ffffff;
+  background-color: none !important;
 }
 
 .buttonSmall {
