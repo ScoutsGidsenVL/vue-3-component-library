@@ -69,6 +69,9 @@ module.exports = {
       }
     },
     extend: {
+      zIndex: {
+        '41': '41',
+      },
       colors: {
         // Change with you want it
         'litepie-primary': colors.coolGray, // color system for light mode
