@@ -36,6 +36,16 @@ export const defineRules = () => {
     return true
   })
 
+  defineRule('oneSection', (value: Array<string>) => {
+    if (value.length === 0) {
+      return 'Selecteer 1 tak.'
+    } else if (1 < value.length) {
+      return 'Selecteer 1 tak. Maak een apart kamp voor elke tak.'
+    }
+
+    return true
+  })
+
   setLocale('nl')
 }
 
